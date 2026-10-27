@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const proyectos = [
+  {
+    nombre: "Weather Dashboard",
+    descripcion:
+      "Panel meteorológico que permite consultar información del clima de diferentes ciudades mediante una API.",
+  },
+  {
+    nombre: "BookManager",
+    descripcion:
+      "Aplicación web para organizar un catálogo de libros, buscar títulos y gestionar su disponibilidad.",
+  },
+  {
+    nombre: "Portafolio personal",
+    descripcion:
+      "Sitio web desarrollado con Astro para presentar mi perfil, mis proyectos y mi currículum.",
+  },
+];
+---
+
+<Layout
+  title="Proyectos | Mi portafolio"
+  description="Conoce algunos proyectos de desarrollo web."
+>
+  <section class="page-title">
+    <p class="aboutme">Mi trabajo</p>
+    <h1>Mis proyectos</h1>
+    <p class="aboutme1">
+      Estos son algunos proyectos que representan mi aprendizaje
+      y mi interés por el desarrollo web.
+    </p>
+  </section>
+
+  <section class="project-grid" aria-label="Lista de proyectos">
+    {proyectos.map((proyecto, index) => (
+      <article class="project-card">
+        <span class="project-number">
+          Proyecto {String(index + 1).padStart(2, "0")}
+        </span>
+
+        <h2>{proyecto.nombre}</h2>
+
+        <p>{proyecto.descripcion}</p>
+      </article>
+    ))}
+  </section>
+</Layout>

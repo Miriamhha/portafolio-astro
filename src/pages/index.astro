@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio | Mi portafolio">
+  <section class="about">
+    <p class="aboutme">Bienvenido a mi Portafolio</p>
+
+    <h1>Hola, soy Miriam. Desarrollo ideas y las convierto en proyectos web.</h1>
+
+    <p class="aboutme1">
+      Soy estudiante de Ingeniería de Sistemas y estoy aprendiendo a crear
+      páginas web modernas, accesibles y funcionales con tecnologías web.
+    </p>
+
+    <div class="actions">
+      <a class="button" href="/proyectos">Ver mis proyectos</a>
+      <a class="button secondary" href="/sobremi">Conocer más sobre mí</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="aboutme">Mi objetivo</p>
+    <h2>Aprender creando</h2>
+    <p class="aboutme1">
+      Este portafolio reúne mi presentación personal, mis proyectos
+      y las tecnologías que voy aprendiendo durante mi formación.
+    </p>
+  </section>
 </Layout>
